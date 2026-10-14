@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moscompass PL – sportowe kompasy do biegu na orientację</title>
+<meta name="description" content="Premium kompasy sportowe Moscompass do biegów na orientację. Modele 2, 3, 8, 9 w wersjach L, R i C. Wysyłka do Paczkomatów InPost.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { forest: '#14352a', forest2: '#0d2820', slate2: '#2b3338', fire: '#ff6a13', neon: '#d7ff2f' },
+  fontFamily: { display: ['"Barlow Condensed"', 'Impact', 'sans-serif'], sans: ['Barlow', 'system-ui', 'sans-serif'] }
+}}};
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  /* Tło hero: warstwice w SVG. Aby użyć zdjęcia, zmień url(...) na własny obraz, np. url('zdjecie.jpg') */
+  .hero-bg {
+    background-image:
+      linear-gradient(115deg, rgba(13,40,32,.96) 35%, rgba(13,40,32,.55)),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' fill='none' stroke='%2338a07a' stroke-opacity='.35'%3E%3Cpath d='M-20 300c60-80 120 20 190-50s120-90 250-20M-20 240c60-80 120 20 190-50s120-90 250-20M-20 180c60-80 120 20 190-50s120-90 250-20M-20 120c60-80 120 20 190-50s120-90 250-20M-20 60c60-80 120 20 190-50s120-90 250-20M-20 360c60-80 120 20 190-50s120-90 250-20'/%3E%3C/svg%3E");
+    background-size: cover, 400px;
+  }
+  .plate input:checked + span { background:#ff6a13; color:#fff; border-color:#ff6a13; }
+  .plate input:disabled + span { opacity:.4; text-decoration:line-through; cursor:not-allowed; background:#f1f5f9; color:#64748b; }
+  .plate input:focus-visible + span, button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #d7ff2f; outline-offset:2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+</style>
+</head>
+<body class="font-sans text-slate2 bg-white antialiased">
+
+<!-- NAGŁÓWEK -->
+<header class="sticky top-0 z-40 bg-forest2/95 backdrop-blur text-white">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#top" class="font-display text-2xl font-extrabold tracking-wide">MOSCOMPASS <span class="text-neon">PL</span></a>
+    <nav class="flex items-center gap-5 text-sm font-semibold">
+      <a href="#produkty" class="hover:text-neon">Produkty</a>
+      <a href="#dostawa" class="hover:text-neon">Dostawa</a>
+      <button id="openCart" class="relative p-2 rounded-full hover:bg-white/10" aria-label="Otwórz koszyk">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 4h2l2.4 11.2a2 2 0 002 1.6h7.7a2 2 0 002-1.5L21 8H6"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg>
+        <span id="badge" class="absolute -top-0.5 -right-0.5 min-w-5 h-5 px-1 rounded-full bg-fire text-white text-xs font-bold grid place-items-center">0</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero-bg text-white">
+  <div class="max-w-6xl mx-auto px-4 py-20 md:py-32">
+    <h1 class="font-display font-extrabold text-5xl sm:text-7xl leading-[.95] max-w-3xl">Wyznacz kierunek.<br>Biegnij szybciej.</h1>
+    <p class="mt-6 max-w-xl text-lg text-white/85">Sportowe kompasy Moscompass dla zawodników biegu na orientację. Szybka, stabilna igła i płytka dopasowana do Twojego chwytu – żebyś w lesie myślał o trasie, a nie o sprzęcie.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#produkty" class="bg-fire hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-lg shadow-lg">Wybierz swój kompas</a>
+      <a href="#dostawa" class="border border-white/40 hover:bg-white/10 font-semibold px-7 py-3.5 rounded-lg">Sprawdź dostawę</a>
+    </div>
+  </div>
+</section>
+
+<!-- DOSTAWA I INFO -->
+<section id="dostawa" class="bg-slate-100">
+  <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-3 gap-6">
+    <div class="md:col-span-3 bg-forest text-white rounded-xl p-6 flex items-start gap-4">
+      <svg class="w-8 h-8 shrink-0 text-neon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0v10l-8 4m8-14l-8 4m0 10L4 17V7m8 4v10"/></svg>
+      <p class="font-display text-2xl sm:text-3xl font-bold leading-tight">Wysyłka wyłącznie do Paczkomatów InPost (15 zł lub gratis od 400 zł)</p>
+    </div>
+    <div><h3 class="font-display text-2xl font-bold">Jak zamówić?</h3><p class="mt-2 text-slate-600">Wybierz model i typ płytki, dodaj do koszyka, podaj dane oraz kod Paczkomatu. Potwierdzenie zamówienia dostaniesz e-mailem.</p></div>
+    <div><h3 class="font-display text-2xl font-bold">Którą płytkę wybrać?</h3><p class="mt-2 text-slate-600">L – dla osób trzymających kompas w lewej dłoni, R – w prawej, C – klasyczna płytka bez uchwytu na kciuk.</p></div>
+    <div><h3 class="font-display text-2xl font-bold">Modele z gwiazdką</h3><p class="mt-2 text-slate-600">Modele 8* i 9* mają ulepszony system stabilizacji igły (zmodyfikowana kapsuła), który zwiększa jej stabilność podczas szybkiego biegu. Cena: 240 zł zamiast 200 zł.</p></div>
+  </div>
+</section>
+
+<!-- PRODUKTY -->
+<section id="produkty" class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-forest">Kompasy Moscompass</h2>
+  <p class="mt-2 text-slate-600">Sześć modeli – od najszybszej igły po wersje super stabilne.</p>
+  <div id="grid" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+</section>
+</main>
+
+<!-- STOPKA -->
+<footer class="bg-forest2 text-white/80">
+  <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6 items-center">
+    <div>
+      <p class="font-display text-2xl font-extrabold text-white">MOSCOMPASS <span class="text-neon">PL</span></p>
+      <p class="text-sm mt-1">Kontakt: <a class="underline hover:text-neon" href="mailto:korall@adextremum.pl">korall@adextremum.pl</a></p>
+    </div>
+    <p class="text-sm md:text-right">© <span id="year"></span> Moscompass PL. Wszelkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+<!-- KOSZYK -->
+<div id="overlay" class="fixed inset-0 z-40 bg-black/60 hidden"></div>
+<aside id="cart" class="fixed top-0 right-0 z-50 h-full w-full max-w-md bg-white shadow-2xl translate-x-full transition-transform duration-300 flex flex-col" aria-label="Koszyk" aria-hidden="true">
+  <div class="flex items-center justify-between px-5 h-16 bg-forest text-white shrink-0">
+    <h2 class="font-display text-2xl font-bold">Twój koszyk</h2>
+    <button id="closeCart" class="p-2 text-2xl leading-none hover:text-neon" aria-label="Zamknij koszyk">&times;</button>
+  </div>
+  <div class="flex-1 overflow-y-auto px-5 py-4">
+    <div id="items"></div>
+    <div id="summary" class="mt-4 pt-4 border-t text-sm space-y-1 hidden">
+      <div class="flex justify-between"><span>Suma częściowa</span><span id="subtotal"></span></div>
+      <div class="flex justify-between"><span>Dostawa (InPost Paczkomat)</span><span id="shipping"></span></div>
+      <p id="freeHint" class="text-xs text-slate-500"></p>
+      <p id="preNote" class="text-xs font-semibold text-fire"></p>
+      <div class="flex justify-between text-lg font-bold pt-2"><span>Razem</span><span id="total"></span></div>
+    </div>
+    <form id="checkout" class="mt-6 space-y-3 hidden" novalidate>
+      <h3 class="font-display text-xl font-bold text-forest">Dane do zamówienia</h3>
+      <label class="block text-sm font-semibold">Imię i nazwisko
+        <input name="name" required autocomplete="name" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 font-normal"></label>
+      <label class="block text-sm font-semibold">E-mail
+        <input name="email" type="email" required autocomplete="email" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 font-normal"></label>
+      <label class="block text-sm font-semibold">Telefon
+        <input name="phone" type="tel" required autocomplete="tel" placeholder="np. 600 123 456" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 font-normal"></label>
+      <label class="block text-sm font-semibold">Kod i adres Paczkomatu
+        <input name="locker" required placeholder="np. WRO12M, ul. Świdnicka 1, Wrocław" class="mt-1 w-full border border-slate-300 rounded-lg px-3 py-2.5 font-normal"></label>
+      <p class="text-xs text-slate-500">Kod Paczkomatu znajdziesz w aplikacji InPost lub na <a class="underline" target="_blank" rel="noopener" href="https://inpost.pl/znajdz-paczkomat">mapie Paczkomatów</a>.</p>
+      <p id="msg" class="text-sm font-semibold" role="alert"></p>
+      <button id="submitBtn" type="submit" class="w-full bg-fire hover:bg-orange-500 text-white font-bold py-3.5 rounded-lg">Wyślij zamówienie</button>
+    </form>
+  </div>
+  <div id="cartFoot" class="px-5 py-4 border-t shrink-0 hidden">
+    <button id="toCheckout" class="w-full bg-neon hover:bg-lime-300 text-forest2 font-bold py-3.5 rounded-lg">Przejdź do zamówienia</button>
+  </div>
+</aside>
+
+<script>
+/* ============ KONFIGURACJA ============ */
+// Zamówienia są wysyłane przez Formspree na Twój e-mail
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xoejkbjz';
+
+/* ---- DOSTĘPNOŚĆ (zmieniaj tutaj) ----
+   PREORDER_MODELS – modele „brak w magazynie, możliwa przedsprzedaż". Wpisz ID modeli, np. ['m3', 'm9s'].
+   DISABLED_PLATES – wyłączone płytki dla danego modelu (L, R lub C), np. { m2: ['L'], m9: ['R', 'C'] }.
+   ID modeli: m8s (8*), m9s (9*), m2, m3, m8, m9 */
+const PREORDER_MODELS = [];
+const DISABLED_PLATES = {};
+
+const FREE_SHIPPING_FROM = 400, SHIPPING_COST = 15;
+
+/* ============ PRODUKTY ============ */
+// Zdjęcie: wpisz ścieżkę do pliku w polu img (np. img: 'img/model-8s.jpg'). Bez img wyświetli się grafika zastępcza.
+const PRODUCTS = [
+  { id: 'm8s', name: 'Model 8*', tag: 'Super stabilna igła', price: 240, img: 'img/model8.png', time: '1–1,5 s', run: 'Znakomita',
+    desc: 'Dla zawodników orientujących się po kolorach i cyfrach. Ulepszony system stabilizacji (zmodyfikowana kapsuła) daje największą stabilność igły podczas szybkiego biegu.' },
+  { id: 'm9s', name: 'Model 9*', tag: 'Przezroczysta, super stabilna', price: 240, img: 'img/model9s.jpg', time: '1–1,5 s', run: 'Znakomita',
+    desc: 'Do precyzyjnego poruszania się po azymucie. Ulepszony system stabilizacji (zmodyfikowana kapsuła) zapewnia znakomitą stabilność igły w biegu.' },
+  { id: 'm2',  name: 'Model 2',  tag: 'Szybka igła', price: 200, img: 'img/model2.png', time: '0,5–1 s', run: 'Dobra',
+    desc: 'Dla stylu szybkiego orientowania. Najszybsze ustawianie igły w ofercie.' },
+  { id: 'm3',  name: 'Model 3',  tag: 'Stabilna igła', price: 200, img: 'img/model3.png', time: '1–1,5 s', run: 'Doskonała',
+    desc: 'Optymalne połączenie szybkości i stabilności igły.' },
+  { id: 'm8',  name: 'Model 8',  tag: 'Stabilna igła', price: 200, img: 'img/model8.png', time: '1–1,5 s', run: 'Doskonała',
+    desc: 'Dla zawodników stosujących technikę orientowania po kolorach i cyfrach. Dobre połączenie szybkości i stabilności igły.' },
+  { id: 'm9',  name: 'Model 9',  tag: 'Przezroczysta', price: 200, img: 'img/model9.jpg', time: '1–1,5 s', run: 'Doskonała',
+    desc: 'Do precyzyjnego poruszania się po azymucie.' }
+];
+const PLATES = { L: 'Lewy kciuk (L)', R: 'Prawy kciuk (R)', C: 'Płytka klasyczna (C)' };
+
+/* ============ NARZĘDZIA ============ */
+const $ = s => document.querySelector(s);
+const pln = n => n.toLocaleString('pl-PL', { minimumFractionDigits: 0 }) + ' zł';
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem('moscompass_cart') || '[]'); } catch (e) {}
+const save = () => { try { localStorage.setItem('moscompass_cart', JSON.stringify(cart)); } catch (e) {} };
+
+/* ============ KATALOG ============ */
+$('#year').textContent = new Date().getFullYear();
+const isPre = id => PREORDER_MODELS.includes(id);
+const offPlates = id => DISABLED_PLATES[id] || [];
+// Usuń z koszyka pozycje, które nie są już dostępne
+cart = cart.filter(i => PRODUCTS.some(p => p.id === i.key.split('-')[0]) && !offPlates(i.key.split('-')[0]).includes(i.plate));
+
+const fallbackImg = p => `<svg class="w-40 h-40 text-neon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" role="img" aria-label="${p.name}"><circle cx="50" cy="50" r="40"/><path d="M50 14l9 36H41z" fill="#ff6a13" stroke="none"/><path d="M50 86l-9-36h18z" fill="#fff" stroke="none"/></svg>`;
+
+$('#grid').innerHTML = PRODUCTS.map(p => {
+  const off = offPlates(p.id), firstOk = Object.keys(PLATES).find(k => !off.includes(k)), pre = isPre(p.id);
+  return `
+  <article class="flex flex-col bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+    <div class="aspect-square w-full bg-gradient-to-br from-forest to-slate2 grid place-items-center relative">
+      ${p.img ? `<img src="${p.img}" alt="Kompas ${p.name}" loading="lazy" class="w-full h-full object-contain">` : fallbackImg(p)}
+      ${p.price > 200 ? '<span class="absolute top-3 right-3 bg-neon text-forest2 text-xs font-bold px-2 py-1 rounded">Ulepszona stabilizacja</span>' : ''}
+      ${pre ? '<span class="absolute top-3 left-3 bg-fire text-white text-xs font-bold px-2 py-1 rounded">Brak w magazynie</span>' : ''}
+    </div>
+    <div class="p-5 flex flex-col flex-1">
+      <h3 class="font-display text-3xl font-extrabold text-forest leading-none">${p.name}</h3>
+      <p class="text-fire font-semibold text-sm mt-1">${p.tag}</p>
+      <p class="text-slate-600 text-sm mt-3">${p.desc}</p>
+      <dl class="mt-3 pt-3 border-t text-sm grid grid-cols-2 gap-y-1 flex-1 content-start">
+        <dt class="text-slate-500">Ustawienie igły</dt><dd class="font-semibold text-right">${p.time}</dd>
+        <dt class="text-slate-500">Stabilność w biegu</dt><dd class="font-semibold text-right">${p.run}</dd>
+      </dl>
+      ${pre ? '<p class="mt-3 text-sm font-semibold text-fire">Brak w magazynie – możesz złożyć zamówienie w przedsprzedaży.</p>' : ''}
+      <fieldset class="mt-4">
+        <legend class="text-xs font-semibold text-slate-500 mb-1.5">Typ płytki</legend>
+        <div class="flex flex-wrap gap-2">
+          ${Object.entries(PLATES).map(([k, v]) => `
+            <label class="plate ${off.includes(k) ? 'cursor-not-allowed' : 'cursor-pointer'}" ${off.includes(k) ? 'title="Ta płytka jest chwilowo niedostępna"' : ''}><input type="radio" class="sr-only" name="plate-${p.id}" value="${k}" ${k === firstOk ? 'checked' : ''} ${off.includes(k) ? 'disabled' : ''}>
+            <span class="block px-3 py-1.5 text-sm font-semibold border border-slate-300 rounded-lg">${v}</span></label>`).join('')}
+        </div>
+      </fieldset>
+      <div class="mt-5 flex items-center justify-between gap-3">
+        <span class="font-display text-3xl font-extrabold">${pln(p.price)}</span>
+        <button data-add="${p.id}" ${firstOk ? '' : 'disabled'} class="${firstOk ? (pre ? 'bg-slate2 hover:bg-slate-700' : 'bg-fire hover:bg-orange-500') : 'bg-slate-300 cursor-not-allowed'} text-white font-bold px-5 py-2.5 rounded-lg">${firstOk ? (pre ? 'Zamów w przedsprzedaży' : 'Dodaj do koszyka') : 'Niedostępny'}</button>
+      </div>
+    </div>
+  </article>`; }).join('');
+
+$('#grid').addEventListener('click', e => {
+  const b = e.target.closest('[data-add]'); if (!b || b.disabled) return;
+  const p = PRODUCTS.find(x => x.id === b.dataset.add);
+  const plate = document.querySelector(`input[name="plate-${p.id}"]:checked`).value;
+  const key = p.id + '-' + plate, ex = cart.find(i => i.key === key);
+  ex ? ex.qty++ : cart.push({ key, name: p.name, plate, price: p.price, qty: 1 });
+  render(); openCart();
+});
+
+/* ============ KOSZYK ============ */
+const openCart = () => { $('#cart').classList.remove('translate-x-full'); $('#overlay').classList.remove('hidden'); $('#cart').setAttribute('aria-hidden', 'false'); };
+const closeCart = () => { $('#cart').classList.add('translate-x-full'); $('#overlay').classList.add('hidden'); $('#cart').setAttribute('aria-hidden', 'true'); };
+$('#openCart').onclick = openCart; $('#closeCart').onclick = closeCart; $('#overlay').onclick = closeCart;
+document.addEventListener('keydown', e => e.key === 'Escape' && closeCart());
+
+const totals = () => {
+  const sub = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const ship = sub === 0 ? 0 : (sub >= FREE_SHIPPING_FROM ? 0 : SHIPPING_COST);
+  return { sub, ship, total: sub + ship };
+};
+
+function render() {
+  const count = cart.reduce((s, i) => s + i.qty, 0), t = totals();
+  $('#badge').textContent = count;
+  $('#items').innerHTML = cart.length ? cart.map(i => `
+    <div class="flex items-center justify-between gap-3 py-3 border-b">
+      <div><p class="font-semibold">${i.name}</p><p class="text-xs text-slate-500">Płytka: ${PLATES[i.plate]}</p>${isPre(i.key.split('-')[0]) ? '<p class="text-xs font-semibold text-fire">Przedsprzedaż</p>' : ''}<p class="text-sm">${pln(i.price)}</p></div>
+      <div class="flex items-center gap-2">
+        <button data-q="-1" data-k="${i.key}" class="w-8 h-8 rounded-full border font-bold hover:bg-slate-100" aria-label="Zmniejsz ilość">−</button>
+        <span class="w-6 text-center font-semibold">${i.qty}</span>
+        <button data-q="1" data-k="${i.key}" class="w-8 h-8 rounded-full border font-bold hover:bg-slate-100" aria-label="Zwiększ ilość">+</button>
+        <button data-rm="${i.key}" class="ml-1 text-slate-400 hover:text-red-600 text-xl" aria-label="Usuń">&times;</button>
+      </div>
+    </div>`).join('') : '<p class="text-slate-500 py-8 text-center">Koszyk jest pusty. Wybierz kompas z katalogu.</p>';
+  $('#summary').classList.toggle('hidden', !cart.length);
+  $('#cartFoot').classList.toggle('hidden', !cart.length || !$('#checkout').classList.contains('hidden') === false && false);
+  if (!cart.length) { $('#checkout').classList.add('hidden'); $('#cartFoot').classList.add('hidden'); }
+  else if ($('#checkout').classList.contains('hidden')) $('#cartFoot').classList.remove('hidden');
+  $('#subtotal').textContent = pln(t.sub);
+  $('#shipping').textContent = t.ship ? pln(t.ship) : 'Gratis';
+  $('#total').textContent = pln(t.total);
+  $('#freeHint').textContent = t.sub && t.sub < FREE_SHIPPING_FROM ? `Do darmowej dostawy brakuje ${pln(FREE_SHIPPING_FROM - t.sub)}.` : (t.sub ? 'Masz darmową dostawę!' : '');
+  $('#preNote').textContent = cart.some(i => isPre(i.key.split('-')[0])) ? 'Zamówienie zawiera pozycje w przedsprzedaży – termin realizacji potwierdzimy e-mailem.' : '';
+  save();
+}
+$('#items').addEventListener('click', e => {
+  const q = e.target.closest('[data-q]'), r = e.target.closest('[data-rm]');
+  if (q) { const i = cart.find(x => x.key === q.dataset.k); i.qty += +q.dataset.q; if (i.qty < 1) cart = cart.filter(x => x !== i); }
+  if (r) cart = cart.filter(x => x.key !== r.dataset.rm);
+  render();
+});
+$('#toCheckout').onclick = () => { $('#checkout').classList.remove('hidden'); $('#cartFoot').classList.add('hidden'); $('#checkout').scrollIntoView({ behavior: 'smooth' }); };
+
+/* ============ SKŁADANIE ZAMÓWIENIA ============ */
+$('#checkout').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target, msg = $('#msg'), btn = $('#submitBtn'), d = Object.fromEntries(new FormData(f));
+  msg.className = 'text-sm font-semibold text-red-600';
+  if (!d.name.trim() || !d.phone.trim() || !d.locker.trim() || !/^\S+@\S+\.\S+$/.test(d.email)) { msg.textContent = 'Uzupełnij poprawnie wszystkie pola.'; return; }
+  const t = totals();
+  const order = {
+    ...d, suma_czesciowa: pln(t.sub), dostawa: t.ship ? pln(t.ship) : 'Gratis', razem: pln(t.total),
+    zamowienie: cart.map(i => `${i.qty} × ${i.name}, płytka ${PLATES[i.plate]} – ${pln(i.price * i.qty)}${isPre(i.key.split('-')[0]) ? ' [PRZEDSPRZEDAŻ]' : ''}`).join('\n'),
+    _subject: 'Nowe zamówienie Moscompass PL'
+  };
+  btn.disabled = true; btn.textContent = 'Wysyłanie…'; msg.textContent = '';
+  try {
+    await sendToFormspree(order);
+  } catch (err) {
+    msg.textContent = 'Nie udało się złożyć zamówienia. Spróbuj ponownie lub napisz do nas e-mail.';
+    btn.disabled = false; btn.textContent = 'Wyślij zamówienie';
+  }
+});
+
+// Formspree – zamówienie trafia na Twój e-mail
+async function sendToFormspree(order) {
+  const res = await fetch(FORMSPREE_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(order) });
+  if (!res.ok) throw new Error('Formspree error');
+  success();
+}
+
+function success() {
+  cart = []; render();
+  $('#checkout').reset(); $('#checkout').classList.add('hidden');
+  $('#items').innerHTML = '<div class="py-10 text-center"><p class="font-display text-3xl font-bold text-forest">Dziękujemy za zamówienie!</p><p class="mt-2 text-slate-600">Skontaktujemy się z Tobą e-mailem w sprawie realizacji zamówienia.</p></div>';
+  $('#submitBtn').disabled = false; $('#submitBtn').textContent = 'Wyślij zamówienie';
+}
+
+render();
+</script>
+</body>
+</html>
